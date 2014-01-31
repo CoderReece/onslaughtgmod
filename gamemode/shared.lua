@@ -7,15 +7,15 @@ GM.Website	= ""
 
 PHASE = "BUILD"
 ZOMBIEMODE_ENABLED = false //Hardmode basically. NPCs take half damage while players take double.
-//This is normally on (and is by default)
+//This is normally on
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 CLASSES = {}
 CLASSES[1] = {NAME = "Scout", 	SPEED = 650, 	JUMP = 260, 			WEAPON_SET = 1, HEALTH = 100, 	AMMO = {2,11}, 		MODEL = "models/player/Group03/Female_02.mdl",	DSCR = "A fast and agile class, the scout is perfect for those who like to be in the action."}
 CLASSES[2] = {NAME = "Soldier", SPEED = 250, 	JUMP = 120, ARMOR = 50, WEAPON_SET = 2, HEALTH = 200,	AMMO = {1,2,8,6}, 	MODEL = "models/player/Group03/male_08.mdl",	DSCR = "A perfect for those defensive players. Featuring a wide range of weapons, the soldier is a perfect well balanced class." }
 CLASSES[3] = {NAME = "Engineer",SPEED = 300, 	JUMP = 160, 			WEAPON_SET = 3, HEALTH = 120, 	AMMO = {2,4}, 		MODEL = "models/player/Group03/Female_03.mdl",	DSCR = "With the ability to make turrets and place mines, the engineer is truly an invaluable class."  }
 CLASSES[4] = {NAME = "Sniper", 	SPEED = 310, 	JUMP = 160, 			WEAPON_SET = 4, HEALTH = 80,	AMMO = {7,5}, 		MODEL = "models/player/Group03/male_06.mdl",	DSCR = "The sniper is a long-ranged class with low health, but extremely high damage."}
-CLASSES[5] = {NAME = "Pyro", 	SPEED = 450, 	JUMP = 210, 			WEAPON_SET = 5, HEALTH = 150, 	AMMO = {2,10,12,8}, MODEL = "models/player/Group03/male_07.mdl",	DSCR = "The pyro comes with a flamethrower, which makes it easy to deal with many enemies at once."	}
-CLASSES[6] = {NAME = "Support", SPEED = 500, 	JUMP = 220, 			WEAPON_SET = 6, HEALTH = 90, 	AMMO = {}, 			MODEL = "models/player/Group03/Female_04.mdl",	DSCR = "Acting as the team medic, the support helps keep the team alive."  }
+CLASSES[5] = {NAME = "Pyro", 	SPEED = 375, 	JUMP = 210, 			WEAPON_SET = 5, HEALTH = 175, 	AMMO = {2,10,12,8}, MODEL = "models/player/Group03/male_07.mdl",	DSCR = "The pyro comes with a flamethrower, which makes it easy to deal with many enemies at once."	}
+CLASSES[6] = {NAME = "Support", SPEED = 450, 	JUMP = 220, 			WEAPON_SET = 6, HEALTH = 120, 	AMMO = {}, 			MODEL = "models/player/Group03/Female_04.mdl",	DSCR = "Acting as the team medic, the support helps keep the team alive."  }
 
 TAUNTS = {}
 TAUNTS[1] = {"vo/episode_1/npc/female01/cit_kill02.wav","vo/npc/female01/gotone01.wav","vo/episode_1/npc/female01/cit_kill04.wav", "vo/episode_1/npc/female01/cit_kill09.wav", "vo/episode_1/npc/female01/cit_kill06.wav","vo/episode_1/npc/female01/cit_kill11.wav","vo/episode_1/npc/female01/cit_kill16.wav"}
