@@ -1,9 +1,7 @@
--- DO NOT REDISTRIBUTE THIS GAMEMODE
 GM.Name 	= "Onslaught 2.0 BETA"
-GM.Author	= "Conman420, Ailia, Scooby, Xera & Matt Damon" -- DO NOT CHANGE THIS
+GM.Author	= "Conman420, Ailia, Scooby, Xera & Matt Damon"
 GM.Email	= ""
 GM.Website	= ""
--- DO NOT REDISTRIBUTE THIS GAMEMODE
 
 PHASE = "BUILD"
 ZOMBIEMODE_ENABLED = false //Hardmode basically. NPCs take half damage while players take double.
@@ -25,55 +23,34 @@ TAUNTS[4] = {"vo/episode_1/npc/male01/cit_kill15.wav","vo/npc/male01/gotone01.wa
 TAUNTS[5] = {"vo/ravenholm/monk_kill01.wav","vo/ravenholm/monk_kill03.wav","vo/ravenholm/madlaugh01.wav","vo/ravenholm/monk_kill08.wav","vo/ravenholm/monk_kill05.wav","vo/ravenholm/madlaugh02.wav", "vo/ravenholm/madlaugh04.wav"}
 TAUNTS[6] = {"vo/episode_1/npc/female01/cit_kill02.wav","vo/npc/female01/gotone01.wav","vo/episode_1/npc/female01/cit_kill04.wav", "vo/episode_1/npc/female01/cit_kill09.wav", "vo/episode_1/npc/female01/cit_kill06.wav","vo/episode_1/npc/female01/cit_kill11.wav","vo/episode_1/npc/female01/cit_kill16.wav"}
 
-//this dictates the default weaponset given to a class. see HL2_WEPS
+//this dictates the default weaponset given to a class. see HL2_WEPS below
 WEAPON_SET = {}
-WEAPON_SET[1] = {}
-WEAPON_SET[1][1] = 13
-WEAPON_SET[1][2] = 2
-WEAPON_SET[1][3] = 8
-WEAPON_SET[2] = {}
-WEAPON_SET[2][1] = 13
-WEAPON_SET[2][2] =	2
-WEAPON_SET[2][3] =	1
-WEAPON_SET[2][4] = 	3
-WEAPON_SET[3] = {}
-WEAPON_SET[3][1] = 7
-WEAPON_SET[3][2] = 2
-WEAPON_SET[3][3] = 11
-WEAPON_SET[3][4] = 4
-WEAPON_SET[4] = {}
-WEAPON_SET[4][1] = 13
-WEAPON_SET[4][2] = 5
-WEAPON_SET[4][3] = 6
-WEAPON_SET[5] = {}
-WEAPON_SET[5][1] = 13
-WEAPON_SET[5][2] =	2
-WEAPON_SET[5][3] =	12
-WEAPON_SET[5][4] = 3
-WEAPON_SET[6] = {}
-WEAPON_SET[6][1] = 13
-WEAPON_SET[6][2] = 9
-WEAPON_SET[6][3] = 10
+WEAPON_SET[1] = {13,2,8}
+WEAPON_SET[2] = {13,2,1,3}
+WEAPON_SET[3] = {7,2,11,4}
+WEAPON_SET[4] = {13,5,6}
+WEAPON_SET[5] = {13,2,12,3}
+WEAPON_SET[6] = {13,9,10}
 
 convCTable = {"sct","sld","eng","snp","pyr","sup"} //convertClassTable, used to convert class numbers to respective class strings. Used on EItems and Items.
 
 				--Default weapons that are spawned with. This is used for prefixes.
 
 HL2_WEPS = {
-/*1*/	{NAME="AR2",			WC="ose_ar2",				SLOT=3,	AD={1,6},	MODEL = "models/weapons/w_IRifle.mdl",					DESC="Combine Pulse Rifle, standard issue to combine units.\nSecondary Fire spits out a combine ball!"},
-/*2*/	{NAME="9MM Pistol",		WC="ose_pistol",			SLOT=2,	AD={2},		MODEL = "models/weapons/W_pistol.mdl",					DESC="Generic 9mm Pistol, standard issue to metropolice."},
-/*3*/	{NAME="Grenade",		WC="ose_frag",				SLOT=4,	AD={8},		MODEL = "models/weapons/w_grenade.mdl",					DESC="Thrown explosive that affects a medium radius.",													NOPRF=true},
-/*4*/	{NAME="Turret Maker",	WC="ose_turretmaker",		SLOT=4,				MODEL = "models/Combine_turrets/Floor_turret.mdl",		DESC="Creates friendly turrets in the blink of an eye!\nRequires a large amount of resources, though.",	NOPRF=true},
-/*5*/	{NAME=".357 Magnum",	WC="ose_357",				SLOT=2,	AD={5},		MODEL = "models/weapons/w_357.mdl",						DESC="A high-powered handgun that still works somehow."},
-/*6*/	{NAME="Crossbow",		WC="swep_xbow",				SLOT=3, AD={7},		MODEL = "models/weapons/w_crossbow.mdl",				DESC="Created years ago, and still proves useful.",														NOPRF=true},
-/*7*/	{NAME="Wrench",			WC="swep_repair",			SLOT=1,				MODEL = "models/weapons/w_crowbar.mdl",					DESC="Repairs stuff faster than your hands can.",														NOPRF=true},
-/*8*/	{NAME="Scattergun",		WC="swep_scatter",			SLOT=3, AD={11},	MODEL = "models/weapons/w_shotgun.mdl",					DESC="High-powered shotgun. Pretty light, too."},
-/*9*/	{NAME="Medi-Cannon",	WC="swep_healthcharge",		SLOT=3,				MODEL = "models/weapons/w_physics.mdl",					DESC="Created by Combine Scientists. Unfortunately,\nthe instructions came in their language.",			NOPRF=true},
-/*10*/	{NAME="Dispensers",		WC="swep_dispensermaker",	SLOT=4,				MODEL = "models/props_combine/health_charger001.mdl",	DESC="Place dispensers that heal people.",																NOPRF=true},
-	//{NAME="Gravity Gun",	WC="weapon_physcannon",		SLOT=3,				MODEL = "models/weapons/w_physics.mdl",					DESC="Created by Dr. Kleiner. Cloned by Magnusson.\n Copyrighted by Magnusson.",						NOPRF=true},
-/*11*/	{NAME="Shotgun",		WC="ose_shotgun",			SLOT=1,	AD={4},		MODEL = "models/weapons/w_shotgun.mdl",					DESC="Extreme damage in a reliable package.\nSecondary Fire fires 2 shells at once!"},
-/*12*/	{NAME="Flamethrower",	WC="swep_flamethrower",		SLOT=1, AD={10},	MODEL = "models/weapons/w_smg1.mdl",					DESC="Roasted enemies by the dozen!",																	NOPRF=true},
-/*13*/	{NAME="Crowbar",		WC="ose_crowbar",			SLOT=1,				MODEL = "models/weapons/w_crowbar.mdl",					DESC="Symbolic to some. Godlike to others.",															NOPRF=true}
+[1] = 	{NAME="AR2",			WC="ose_ar2",				SLOT=3,	AD={1,6},	MODEL = "models/weapons/w_IRifle.mdl",					DESC="Combine Pulse Rifle, standard issue to combine units.\nSecondary Fire spits out a combine ball!"},
+[2] =	{NAME="9MM Pistol",		WC="ose_pistol",			SLOT=2,	AD={2},		MODEL = "models/weapons/W_pistol.mdl",					DESC="Generic 9mm Pistol, standard issue to metropolice."},
+[3] =	{NAME="Grenade",		WC="ose_frag",				SLOT=4,	AD={8},		MODEL = "models/weapons/w_grenade.mdl",					DESC="Thrown explosive that explodes.",																	NOPRF=true},
+[4] =	{NAME="Turret Maker",	WC="ose_turretmaker",		SLOT=4,				MODEL = "models/Combine_turrets/Floor_turret.mdl",		DESC="Creates friendly turrets in the blink of an eye!\nRequires a large amount of resources, though.",	NOPRF=true},
+[5] =	{NAME=".357 Magnum",	WC="ose_357",				SLOT=2,	AD={5},		MODEL = "models/weapons/w_357.mdl",						DESC="A high-powered handgun, which is very accurate."},
+[6] =	{NAME="Crossbow",		WC="swep_xbow",				SLOT=3, AD={7},		MODEL = "models/weapons/w_crossbow.mdl",				DESC="Created years ago, and still proves useful.",														NOPRF=true},
+[7] =	{NAME="Wrench",			WC="swep_repair",			SLOT=1,				MODEL = "models/weapons/w_crowbar.mdl",					DESC="Repairs stuff faster than your hands can.",														NOPRF=true},
+[8] = 	{NAME="Scattergun",		WC="ose_scattergun",		SLOT=3, AD={11},	MODEL = "models/weapons/w_shotgun.mdl",					DESC="High-powered shotgun that is low on the weight scale."},
+[9] =	{NAME="Medi-Cannon",	WC="swep_healthcharge",		SLOT=3,				MODEL = "models/weapons/w_physics.mdl",					DESC="Left-click heals people!\nRight click damages them.",												NOPRF=true},
+[10] =	{NAME="Dispensers",		WC="swep_dispensermaker",	SLOT=4,				MODEL = "models/props_combine/health_charger001.mdl",	DESC="Place dispensers that heal people.",																NOPRF=true},
+	//{NAME="Gravity Gun",	WC="weapon_physcannon",		SLOT=3,				MODEL = "models/weapons/w_physics.mdl",						DESC="Created by Dr. Kleiner. Cloned by Magnusson.\n Copyrighted by Magnusson.",						NOPRF=true},
+[11] = 	{NAME="Shotgun",		WC="ose_shotgun",			SLOT=1,	AD={4},		MODEL = "models/weapons/w_shotgun.mdl",					DESC="Extreme damage in a reliable package.\nSecondary Fire fires 2 shells at once!"},
+[12] =	{NAME="Flamethrower",	WC="swep_flamethrower",		SLOT=1, AD={10},	MODEL = "models/weapons/w_smg1.mdl",					DESC="Roasted enemies by the dozen!",																	NOPRF=true},
+[13] =	{NAME="Crowbar",		WC="ose_crowbar",			SLOT=1,				MODEL = "models/weapons/w_crowbar.mdl",					DESC="The vortigaunts only remembered it flying down a hallway.",										NOPRF=true}
 }
 
 
@@ -200,13 +177,13 @@ RANKS[1] = {NAME = "Scientist",					KILLS = 0, 		COLOR = Color(255, 	255, 	255, 
 RANKS[2] = {NAME = "Citizen", 					KILLS = 50, 	COLOR = Color(0, 	100, 	220, 	255)}
 RANKS[3] = {NAME = "Metrocop", 					KILLS = 200, 	COLOR = Color(80, 	150, 	80,  	255)}
 RANKS[4] = {NAME = "Rebel", 					KILLS = 500, 	COLOR = Color(120,	120,	120, 	255)}
-RANKS[5] = {NAME = "Combine Soldier", 			KILLS = 1000, 	COLOR = Color(100, 	70, 	70,  	255)} //yes, all of these are combine. the rebels were retarded in HL2.
+RANKS[5] = {NAME = "Combine Soldier", 			KILLS = 1000, 	COLOR = Color(100, 	70, 	70,  	255)}
 RANKS[6] = {NAME = "Combine Shotgunner", 		KILLS = 2500, 	COLOR = Color(100,	29,		0,  	255)}
 RANKS[7] = {NAME = "Combine Prison Guard", 		KILLS = 5000, 	COLOR = Color(20, 	80, 	20,  	255)}
 RANKS[8] = {NAME = "Combine Super Soldier", 	KILLS = 10000, 	COLOR = Color(150, 	0, 		0,		255)}
 RANKS[10] = {NAME = "Hunter Chopper Gunner", 	KILLS = 25000, 	COLOR = Color(0, 	20, 	80, 	255)}
 RANKS[11] = {NAME = "Advisor",					KILLS = 50000, 	COLOR = Color(150,	150,	180, 	255)}
-RANKS[12] = {NAME = "Eli's Librarian",			KILLS = 75000,	COLOR = Color(150,	200,	150, 	255)} //movie reference (eli's book)
+RANKS[12] = {NAME = "Eli's Librarian",			KILLS = 75000,	COLOR = Color(150,	200,	150, 	255)}
 RANKS[12] = {NAME = "A Free Man", 				KILLS = 100000, COLOR = Color(225, 	125, 	125, 	255)}
 
 for k,v in pairs(RANKS) do
